@@ -34,12 +34,13 @@ div#slideArea {
 
     overflow: hidden;
 
-    position: relative;
+    /*position: relative;*/    /* 슬라이드쇼 공통 텍스트 용 */
 }
 div#slideShuttleFrame {
     width: 3050px;
     /*border: 3px solid #f00;*/
-    position: absolute;
+
+    margin-left: 0px;
 
 }
 div#slideShuttleFrame::after {
@@ -50,14 +51,17 @@ div#slideShuttleFrame::after {
 }
 div#slideShuttleFrame>a {
     float: left;
+
+    position: relative;    /* 슬라이드쇼 개별 텍스트 용 */
 }
 
-span#slideTxt {
+/* 슬라이드 텍스트 시작 (고정 공통 텍스트) */
+/*span#slideTxt {
     width: 200px;
     height: 100px;
     text-align: center;
     line-height: 100px;
-    /*border: 1px solid #000;*/
+    border: 1px solid #000;
 
     display: inline-block;
 
@@ -68,7 +72,30 @@ span#slideTxt {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%)
+}*/
+/* 슬라이드 텍스트 끝 (고정 공통 텍스트) */
+
+/* 슬라이드 개별 텍스트 시작 */
+div#slideArea span {
+    width: 200px;
+    height: 100px;
+    color: #f80;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.65);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 }
+/* 슬라이드 개별 텍스트 끝 */
 
 
 /* 슬라이드쇼 영역 끝 */
